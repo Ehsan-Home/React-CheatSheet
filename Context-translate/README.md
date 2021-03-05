@@ -11,7 +11,8 @@ It is used for communication between parent and nested children.(Root to leaf ch
 ![alt text](./src/MdPics/Basic.png)
 
 ## Steps for working with Context
-### Class Based(`This.context`):
+### Class Based:
+`This.context`
 1. Create a folder named `Context`  
 2. Create your js file `ExampleContext.js`
 3. Write the code below  
@@ -51,8 +52,7 @@ class Field extends React.Component {
     }
 }
 ```
-### Class Based(`Consumer`):
-You also can use Consumer to fetch data. <br />
+- `Consumer`: you also can use Consumer to fetch data. <br />
 **Note:** The child of consumer is a function, not JSX component.
 
 ```javascript
