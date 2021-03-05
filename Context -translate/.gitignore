@@ -8,6 +8,9 @@
 # testing
 /coverage
 
+# MAC
+.DS_Store
+
 # production
 /build
 
