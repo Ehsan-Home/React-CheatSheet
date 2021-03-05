@@ -62,3 +62,20 @@ class Field extends React.Component {
 
 <UserCreate /> // passing default value of context (in this case: "english")
 ```
+<hr>
+
+**Note:** Each element that is using context inside of itself, is somehow generating a seperate pipe for transmitting data
+
+```javascript
+<LanguageContext.Provider value={language}>
+    <UserCreate />
+</LanguageContext.Provider>
+
+<LanguageContext.Provider value={'english'}>
+    <UserCreate />
+</LanguageContext.Provider>
+
+<UserCreate />
+```
+
+![alt text](./src/MdPics/Pipes.png)
