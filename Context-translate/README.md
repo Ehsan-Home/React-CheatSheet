@@ -116,3 +116,4 @@ renderSubmit(value) {
 <hr>
 
 ### Function Based:
+Exactly same as class based except `this.context` cannot be used. Instead, we should use `provider` or `default value` for passing data and `consumer` for recieving data.
