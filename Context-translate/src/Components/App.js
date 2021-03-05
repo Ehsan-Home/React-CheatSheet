@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import LanguageContext from '../Contexts/LanguageContext'
 import UserCreate from './UserCreate'
 
 const App = () => {
@@ -16,7 +17,10 @@ const App = () => {
             <i className="flag us" onClick={() => onLanguageChange("english")}/>
             <i className="flag nl" onClick={() => onLanguageChange("dutch")}/>
             <br /><br />
-            <UserCreate />
+
+            <LanguageContext.Provider value={language}>
+                <UserCreate />
+            </LanguageContext.Provider>
         </div>
     )
 }

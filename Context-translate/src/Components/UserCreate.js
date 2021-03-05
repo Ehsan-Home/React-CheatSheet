@@ -1,15 +1,28 @@
-import React from 'react'
-import Button from './Button'
-import Field from './Field'
+import React from "react";
+import LanguageContext from "../Contexts/LanguageContext";
+import Button from "./Button";
+import Field from "./Field";
 
+// const UserCreate = () => {
+//     return (
+//         <div className="ui form">
+//             <Field />
+//             <Button />
+//         </div>
+//     )
+// }
 
-const UserCreate = () => {
+class UserCreate extends React.Component {
+    static contextType = LanguageContext
+  render() {
+      console.log("context",this.context)
     return (
-        <div className="ui form">
-            <Field />
-            <Button />
-        </div>
-    )
+      <div className="ui form">
+        <Field />
+        <Button />
+      </div>
+    );
+  }
 }
 
-export default UserCreate
+export default UserCreate;
