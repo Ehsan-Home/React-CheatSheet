@@ -4,7 +4,7 @@ Cheat-sheet for React Context 👍🏻<br />
 
 
 ## Basic idea
-It is used for communication between parent and nested children.(Root to leaf children that has no inner components.)
+It is used for communication between parent and nested children.
 <br /><br />
 
 ## Relation of parent & children in Context
@@ -12,7 +12,6 @@ It is used for communication between parent and nested children.(Root to leaf ch
 
 ## Steps for working with Context
 ### Class Based:
-`This.context`
 1. Create a folder named `Context`  
 2. Create your js file `ExampleContext.js`
 3. Write the code below  
@@ -35,7 +34,7 @@ import LanguageContext from '...'
 
 5. Use context in children components:<br />
 - `this.context`: Using `this.context` to retrieve data <br />
-**Note:** `static` keyword is for letting a varibale to be initialized inside a component.
+**Note:** `static` keyword is for letting a varibale to be initialized inside a `class`.
 
 ```javascript
 class Field extends React.Component {
@@ -116,4 +115,4 @@ renderSubmit(value) {
 
 <hr>
 
-### Class Based(`Consumer`):
+### Function Based:
