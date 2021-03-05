@@ -21,6 +21,8 @@ const App = () => {
             <LanguageContext.Provider value={language}>
                 <UserCreate />
             </LanguageContext.Provider>
+
+            <UserCreate />
         </div>
     )
 }
