@@ -11,7 +11,7 @@ It is used for communication between parent and nested children.(Root to leaf ch
 ![alt text](./src/MdPics/Basic.png)
 
 ## Steps for working with Context
-### Class Based:
+### Class Based(`This.context`):
 1. Create a folder named `Context`  
 2. Create your js file `ExampleContext.js`
 3. Write the code below  
@@ -32,8 +32,9 @@ import LanguageContext from '...'
 </LanguageContext.Provider>
 ```
 
-5. Use this context in children components:
-<br /> `static` keyword is for letting a varibale to be initialized inside a component.
+5. Use context in children components:<br />
+- `this.context`: Using `this.context` to retrieve data <br />
+**Note:** `static` keyword is for letting a varibale to be initialized inside a component.
 
 ```javascript
 class Field extends React.Component {
@@ -50,6 +51,39 @@ class Field extends React.Component {
     }
 }
 ```
+- `Consumer`: you also can use Consumer to fetch data. <br />
+**Note:** The child of consumer is a function, not JSX component.
+
+```javascript
+renderSubmit(value) {
+    return value === "english" ? "Submit" : "Voorleggen";
+}
+
+<LanguageContext.Consumer>
+    {(value) => this.renderSubmit(value)} // only function is acceptable
+</LanguageContext.Consumer>
+```
+
+<hr>
+
+**Note:** Accessing multiple context in one element
+
+```javascript
+<ColorContext.Consumer> // calling one Consumer
+    {(color) => {
+        return (
+        <button className={`ui button ${color}`}>
+            {
+            <LanguageContext.Consumer> // Calling another consumer
+                {(value) => this.renderSubmit(value)}
+            </LanguageContext.Consumer>
+            }
+        </button>
+        );
+    }}
+</ColorContext.Consumer>
+```
+
 <hr>
 
 **Note:** We can use context with no `Provider`. In that case, the components will use the default value of context.
@@ -78,3 +112,7 @@ class Field extends React.Component {
 ```
 
 ![alt text](./src/MdPics/Pipes.png)
+
+<hr>
+
+### Class Based(`Consumer`):
