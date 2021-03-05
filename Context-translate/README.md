@@ -51,7 +51,8 @@ class Field extends React.Component {
     }
 }
 ```
-- `Consumer`: you also can use Consumer to fetch data. <br />
+### Class Based(`Consumer`):
+You also can use Consumer to fetch data. <br />
 **Note:** The child of consumer is a function, not JSX component.
 
 ```javascript
