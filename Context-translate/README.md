@@ -4,11 +4,10 @@ Cheat-sheet for React Context 👍🏻<br />
 
 
 ## Basic idea
-<hr>
 It is used for communication between parent and nested children.(Root to leaf children that has no inner components.)
 <br /><br />
 
-## Relation of parent & children in Context <hr>
+## Relation of parent & children in Context
 ![alt text](./src/MdPics/Basic.png)
 
 ## Steps for working with Context

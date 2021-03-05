@@ -15,7 +15,6 @@ import Field from "./Field";
 class UserCreate extends React.Component {
     static contextType = LanguageContext
   render() {
-      console.log("context",this.context)
     return (
       <div className="ui form">
         <Field />
