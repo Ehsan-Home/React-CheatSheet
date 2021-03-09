@@ -1,5 +1,5 @@
-import React from 'react'
-import LanguageContext from '../Contexts/LanguageContext'
+import React from "react";
+import LanguageContext from "../Contexts/LanguageContext";
 
 // const Field = () => {
 //     return (
@@ -11,17 +11,20 @@ import LanguageContext from '../Contexts/LanguageContext'
 // }
 
 class Field extends React.Component {
-    static contextType = LanguageContext
+  static contextType = LanguageContext;
 
-    render() {
-        const text = this.context === 'english' ? 'Name' : 'Naam'
-        return (
-            <div className="ui field">
-             <label>{text}</label>
-             <input />
-         </div>
-        )
-    }
+  render() {
+    const text = this.context === "english" ? "Name" : "Naam";
+    return (
+      <>
+        <h1 className="ui header">this.context</h1>
+        <div className="ui field">
+          <label>{text}</label>
+          <input />
+        </div>
+      </>
+    );
+  }
 }
 
-export default Field
+export default Field;

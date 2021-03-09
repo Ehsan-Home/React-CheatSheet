@@ -7,7 +7,7 @@ import UserCreate from "./UserCreate";
 
 const App = () => {
   const [language, setLanguage] = useState("english");
-  const [name ,setName] = useState("")
+  const [name, setName] = useState("");
 
   const onLanguageChange = (language) => {
     setLanguage(language);
@@ -21,17 +21,14 @@ const App = () => {
       <div>Select a langauge</div>
       <i className="flag us" onClick={() => onLanguageChange("english")} />
       <i className="flag nl" onClick={() => onLanguageChange("dutch")} />
-      <br />
-      <br />
-
-
-      <br />
+      <div className="ui divider" />
 
       <div>Click this button to send the context</div>
-      <nameContext.Provider value={{name,setName}}>
-      <button className="button ui green"
-      onClick={() => setName("ehsan")}>Send</button>
-      <Name />
+      <nameContext.Provider value={{ name, setName }}>
+        <button className="button ui green" onClick={() => setName("ehsan")}>
+          Send
+        </button>
+        <Name />
       </nameContext.Provider>
       <br />
 
