@@ -63,6 +63,17 @@ renderSubmit(value) {
     {(value) => this.renderSubmit(value)} // only function is acceptable
 </LanguageContext.Consumer>
 ```
+- `useContext`: We can also use `useContext` to simply get data that is recieved from parent.
+
+```javascript
+import { useContext } from 'react'
+
+const {name} = useContext(nameContext) // Getting the value with useContext
+
+return (
+    <div>Name : {name}</div>       
+)
+```
 
 <hr>
 
@@ -116,4 +127,7 @@ renderSubmit(value) {
 <hr>
 
 ### Function Based:
-Exactly same as class based except `this.context` cannot be used. Instead, we should use `provider` or `default value` for passing data and `consumer` for recieving data.
+- For passing data: Exactly same as class based `Provider` <br>
+- For receiving data: Use `useContext`
+  - Using `this.context` is not allowed in function based
+  - Using `consumer` makes the code dirty.
