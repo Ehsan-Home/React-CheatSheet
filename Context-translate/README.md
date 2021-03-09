@@ -18,11 +18,11 @@ It is used for communication between parent and nested children.
 
 ```javascript
 import React from 'react'
-export default React.createContext(<ContextContent>)
+export default React.createContext("INITIAL VALUE OF CONTEXT")
 ```
 
 4. Wrap your parent root in `<NameofContext.Provider>`.
-<br />The content of `value` is the value of context being set.
+<br />The content of `value` is the value of context being set and sent to either deep or direct child.
 ```javascript
 import LanguageContext from '...'
 
